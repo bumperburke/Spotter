@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="stefan.burke.mydit.ie.spotter.Activities.Gallery"
+    android:background="@drawable/home_background">
+
+    <GridView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:id="@+id/imageGrid"
+        android:columnWidth="100dp"
+        android:drawSelectorOnTop="true"
+        android:gravity="center"
+        android:focusable="true"
+        android:clickable="true"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/noEntries"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:textIsSelectable="true"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back"
+        android:layout_below="@+id/noEntries"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/developedBy"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10px"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

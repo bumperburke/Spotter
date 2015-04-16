@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background"
+    tools:context="stefan.burke.mydit.ie.spotter.Activities.MealPlan">
+
+    <TextView
+        android:id="@+id/mealWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="@string/mealWel"
+        android:textColor="@color/black"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mealWelcome" />
+
+    <!-- If there is data retrieved. Place button under list -->
+    <ImageButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@android:id/list"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent" />
+
+    <!-- If no data in DB. Display following -->
+    <TextView
+        android:id="@+id/noEntries"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <ImageButton
+        android:id="@+id/addEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noEntries"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/developedBy"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10px"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

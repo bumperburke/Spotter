@@ -1,0 +1,147 @@
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:text="@string/app_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:textColor="@color/yellow"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:layout_marginBottom="10px" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:id="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome"
+        android:layout_below="@+id/logo"
+        android:text="@string/welcomeMsg"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:textIsSelectable="true"
+        android:layout_marginTop="5px" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome2"
+        android:layout_below="@+id/welcome"
+        android:text="@string/welcomeMsg2"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome3"
+        android:layout_below="@+id/welcome2"
+        android:text="@string/welcomeMsg3"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logIn"
+        android:layout_below="@+id/welcome3"
+        android:text="@string/login"
+        android:gravity="left"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:layout_marginTop="10px" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uname"
+        android:layout_below="@+id/logIn"
+        android:inputType="text"
+        android:hint="@string/unameHint"
+        android:nextFocusDown="@+id/pword"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pword"
+        android:layout_below="@+id/uname"
+        android:inputType="textPassword"
+        android:hint="@string/passHint"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/log"
+        android:layout_below="@+id/pword"
+        android:text="@string/log" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notReg"
+        android:layout_below="@+id/log"
+        android:text="@string/regMsg"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:layout_marginTop="10px" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/register"
+        android:layout_below="@+id/notReg"
+        android:text="@string/reg"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register"
+        android:text="@string/developedBy"
+        android:textSize="10dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10px"/>
+
+</RelativeLayout>
+
+</ScrollView>

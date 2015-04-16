@@ -1,0 +1,196 @@
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/regMsg"
+        android:text="@string/regIntro"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:textIsSelectable="true"
+        android:layout_marginTop="5dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fname"
+        android:layout_below="@+id/regMsg"
+        android:hint="@string/fnameHint"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:nextFocusDown="@+id/lname" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lname"
+        android:layout_below="@+id/fname"
+        android:hint="@string/lnameHint"
+        android:singleLine="true"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:nextFocusDown="@id/uname"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uname"
+        android:layout_below="@+id/lname"
+        android:hint="@string/unameHint"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:nextFocusDown="@id/pword"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/pword"
+        android:layout_below="@+id/uname"
+        android:hint="@string/passHint"
+        android:singleLine="true"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:nextFocusDown="@+id/passconf"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/passconf"
+        android:layout_below="@+id/pword"
+        android:hint="@string/passConfHint"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:nextFocusDown="@+id/email"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:layout_below="@+id/passconf"
+        android:hint="@string/eHint"
+        android:inputType="textEmailAddress"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:nextFocusDown="@+id/day"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dob"
+        android:layout_below="@+id/email"
+        android:text="@string/Dob"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textIsSelectable="true"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dob"
+        android:id="@+id/dobGroup"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day"
+            android:hint="@string/dayHint"
+            android:gravity="center"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="2"
+            android:nextFocusForward="@+id/month"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month"
+            android:hint="@string/monthHint"
+            android:gravity="center"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="2"
+            android:nextFocusForward="@+id/year"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/year"
+            android:hint="@string/yearHint"
+            android:gravity="center"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="4"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dobGroup"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" >
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioMale"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioFemale" />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/register"
+        android:text="@string/reg"
+        android:layout_below="@+id/radioSex"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/developedBy"
+        android:textSize="10dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/register"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10px"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+
+</ScrollView>

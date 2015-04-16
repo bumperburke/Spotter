@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/home_background">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/dateGroup"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date"
+            android:text="@string/date"
+            android:layout_marginEnd="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/retDate"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleGroup"
+        android:layout_below="@+id/dateGroup"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="@string/title"
+            android:layout_marginEnd="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/retTitle"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodAmountGroup"
+        android:orientation="horizontal"
+        android:layout_below="@+id/titleGroup"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/food"
+            android:text="@string/food"
+            android:textSize="20dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/retFood"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/amount"
+            android:text="@string/amount"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/retAmount"
+            android:layout_below="@+id/retFood"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeGroupList"
+        android:orientation="horizontal"
+        android:layout_below="@+id/foodAmountGroup"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            android:text="@string/time"
+            android:layout_below="@+id/amount"
+            android:layout_marginEnd="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/retTime"
+            android:layout_below="@+id/retAmount"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</RelativeLayout>

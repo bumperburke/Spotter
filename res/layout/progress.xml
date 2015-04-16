@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="stefan.burke.mydit.ie.spotter.Activities.Progress"
+    android:background="@drawable/home_background">
+
+    <TextView
+        android:text="@string/progressWel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progWelcome"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textIsSelectable="true"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/menuGroup"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:text="@string/view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewGal"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textIsSelectable="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewGallery"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/gallery"
+            android:background="@drawable/button_shape"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:text="@string/take"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/takePic"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textIsSelectable="true"
+            android:layout_marginTop="10dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/takePicture"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/camera"
+            android:background="@drawable/button_shape"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/developedBy"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10px"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

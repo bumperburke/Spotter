@@ -1,0 +1,528 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="stefan.burke.mydit.ie.spotter.Activities.AddWorkout"
+        android:background="@drawable/home_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editWorkout"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textIsSelectable="true"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateTitle"
+            android:text="@string/date"
+            android:layout_below="@+id/addWorkoutHead"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textIsSelectable="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/workoutDateGroup"
+            android:layout_below="@+id/dateTitle"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" >
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/workoutDay"
+                android:hint="@string/dayHint"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLength="2"
+                android:nextFocusRight="@+id/month"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/workoutMonth"
+                android:hint="@string/monthHint"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLength="2"
+                android:nextFocusRight="@+id/year"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/workoutYear"
+                android:hint="@string/yearHint"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLength="4"
+                android:nextFocusDown="@+id/titleEnt"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeTitle"
+            android:text="@string/time"
+            android:layout_below="@+id/workoutDateGroup"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textIsSelectable="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/workoutTimeGroup"
+            android:layout_below="@+id/timeTitle"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/workoutHrsEnt"
+                android:textColor="@color/white"
+                android:hint="@string/hrs"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLength="2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sep"
+                android:textSize="20dp"
+                android:text="@string/seperator"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textIsSelectable="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/workoutMinEnt"
+                android:hint="@string/min"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLength="2"
+                android:nextFocusRight="@+id/hrsEnt"/>
+
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/workoutAmPmSel"
+                android:entries="@array/amPM"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/workoutTitle"
+            android:layout_below="@+id/workoutTimeGroup"
+            android:text="@string/workoutTitle"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textIsSelectable="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/workoutTitleAdd"
+            android:layout_below="@+id/workoutTitle"
+            android:hint="@string/titleHint"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:nextFocusDown="@+id/foodEnt"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exerciseTitleGroup"
+            android:layout_below="@+id/workoutTitleAdd"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/exerciseTitle"
+                android:text="@string/exercise"
+                android:layout_marginEnd="20dp"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/setsTitle"
+                android:text="@string/sets"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/repsTitle"
+                android:text="@string/reps"
+                android:layout_marginEnd="25dp"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weightTitle"
+                android:text="@string/weight"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/exerciseGroup1"
+            android:layout_below="@+id/exerciseTitleGroup"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/exerciseAdd1"
+                android:hint="@string/exerciseHint"
+                android:inputType="text"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_marginEnd="30dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setsAdd1"
+                android:hint="@string/setsHint"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_marginEnd="40dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/repsAdd1"
+                android:hint="@string/repsHint"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_marginEnd="40dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weightAdd1"
+                android:hint="@string/weightHint"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/metricSelect1"
+                android:entries="@array/metric"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/exerciseGroup2"
+            android:layout_below="@+id/exerciseGroup1"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/exerciseAdd2"
+                android:hint="@string/exerciseHint"
+                android:inputType="text"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_marginEnd="30dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setsAdd2"
+                android:hint="@string/setsHint"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_marginEnd="40dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/repsAdd2"
+                android:hint="@string/repsHint"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_marginEnd="40dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weightAdd2"
+                android:hint="@string/weightHint"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/metricSelect2"
+                android:entries="@array/metric"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/exerciseGroup3"
+            android:layout_below="@+id/exerciseGroup2"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/exerciseAdd3"
+                android:hint="@string/exerciseHint"
+                android:inputType="text"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_marginEnd="30dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setsAdd3"
+                android:hint="@string/setsHint"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_marginEnd="40dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/repsAdd3"
+                android:hint="@string/repsHint"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_marginEnd="40dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weightAdd3"
+                android:hint="@string/weightHint"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/metricSelect3"
+                android:entries="@array/metric"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/exerciseGroup4"
+            android:layout_below="@+id/exerciseGroup3"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/exerciseAdd4"
+                android:hint="@string/exerciseHint"
+                android:inputType="text"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_marginEnd="30dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setsAdd4"
+                android:hint="@string/setsHint"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_marginEnd="40dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/repsAdd4"
+                android:hint="@string/repsHint"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_marginEnd="40dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weightAdd4"
+                android:hint="@string/weightHint"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/metricSelect4"
+                android:entries="@array/metric"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+        <!-- Add Button -->
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/addEntry"
+            android:layout_below="@+id/exerciseGroup4"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/add"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/developedBy"
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10px"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+</ScrollView>

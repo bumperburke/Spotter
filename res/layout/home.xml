@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="stefan.burke.mydit.ie.spotter.Activities.Home"
+    android:background="@drawable/home_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HomeWelcome"
+        android:text="@string/homeWelcome"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textIsSelectable="true"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/buttonGroupLeft"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_below="@+id/HomeWelcome">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mealTitle"
+                android:text="@string/meal"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textIsSelectable="true"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/meal"
+                android:src="@drawable/knifefork"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_shape"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressTitle"
+                android:layout_below="@+id/workout"
+                android:text="@string/progress"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textIsSelectable="true"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress"
+                android:src="@drawable/camera"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_shape"
+                android:layout_centerHorizontal="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/buttonGroupRight"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/buttonGroupLeft"
+            android:layout_below="@+id/HomeWelcome"
+            android:padding="5dp"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/workoutTitle"
+                android:text="@string/workout"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textIsSelectable="true"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/workout"
+                android:src="@drawable/weight"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_shape"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mapTitle"
+                android:text="@string/map"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textIsSelectable="true"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/map"
+                android:src="@drawable/map"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_shape"
+                android:layout_centerHorizontal="true"/>
+
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/developedBy"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10px"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

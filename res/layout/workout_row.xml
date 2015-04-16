@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/home_background">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateTimeGroup"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/workoutDate"
+            android:text="@string/date"
+            android:layout_marginEnd="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateOfWorkout"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/workoutTime"
+            android:text="@string/time"
+            android:layout_marginEnd="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeOfWorkout"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/workoutTitleGroup"
+        android:layout_below="@+id/dateTimeGroup"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleWork"
+            android:text="@string/workoutTitle"
+            android:layout_marginEnd="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleOfWorkout"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exerciseTitleGroup"
+        android:layout_below="@+id/workoutTitleGroup"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exerciseTitle"
+            android:text="@string/exercise"
+            android:layout_marginEnd="30dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:id="@+id/setsTitle"
+            android:text="@string/sets"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/repsTitle"
+            android:text="@string/reps"
+            android:layout_marginEnd="30dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/weightTitle"
+            android:text="@string/weight"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exerciseGroup1"
+        android:layout_below="@+id/exerciseTitleGroup"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exercise1"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sets1"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:layout_marginEnd="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reps1"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:layout_marginEnd="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/weight1"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exerciseGroup2"
+        android:layout_below="@+id/exerciseGroup1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exercise2"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sets2"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:layout_marginEnd="60dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reps2"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:layout_marginEnd="60dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/weight2"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exerciseGroup3"
+        android:layout_below="@+id/exerciseGroup2"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exercise3"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sets3"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:layout_marginEnd="60dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reps3"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:layout_marginEnd="60dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/weight3"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exerciseGroup4"
+        android:layout_below="@+id/exerciseGroup3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exercise4"
+            android:layout_marginEnd="70dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sets4"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:layout_marginEnd="60dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reps4"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:layout_marginEnd="60dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/weight4"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</RelativeLayout>

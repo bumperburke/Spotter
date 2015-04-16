@@ -1,0 +1,286 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="stefan.burke.mydit.ie.spotter.Activities.AddMeal"
+    android:background="@drawable/home_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mealEdit"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textIsSelectable="true"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Date text view and Edit text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editDate"
+        android:text="@string/date"
+        android:layout_below="@+id/mealEdit"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textIsSelectable="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editDate"
+        android:orientation="horizontal"
+        android:id="@+id/editDobGroup"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editDay"
+            android:hint="@string/dayHint"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="2"
+            android:nextFocusRight="@+id/month"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editMonth"
+            android:hint="@string/monthHint"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="2"
+            android:nextFocusRight="@+id/year"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editYear"
+            android:hint="@string/yearHint"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="4"
+            android:nextFocusDown="@+id/titleEnt"/>
+
+    </LinearLayout>
+
+    <!-- Title text view and edit Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTitleTitle"
+        android:text="@string/title"
+        android:layout_below="@+id/editDobGroup"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textIsSelectable="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTitleEnt"
+        android:layout_below="@+id/editTitleTitle"
+        android:hint="@string/titleHint"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:nextFocusDown="@+id/foodEnt"/>
+
+    <!-- Food text view and edit text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editFoodTitle"
+        android:text="@string/food"
+        android:layout_below="@+id/editTitleEnt"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textIsSelectable="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editFoodEnt"
+        android:layout_below="@+id/editFoodTitle"
+        android:hint="@string/foodHint"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:nextFocusDown="@+id/amountEnt"/>
+
+    <!-- Amount text view and edit text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editAmountTitle"
+        android:text="@string/amount"
+        android:layout_below="@+id/editFoodEnt"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textIsSelectable="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/editAmountGroup"
+        android:layout_below="@+id/editAmountTitle"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editAmountEnt"
+            android:hint="@string/amountHint"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:inputType="number"
+            android:nextFocusDown="@+id/minEnt"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editMetricSel"
+            android:entries="@array/metric"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <!-- Time text view and edit text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTimeTitle"
+        android:text="@string/time"
+        android:layout_below="@+id/editAmountGroup"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textIsSelectable="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTimeGroup"
+        android:layout_below="@+id/editTimeTitle"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editHrsEnt"
+            android:textColor="@color/white"
+            android:hint="@string/hrs"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editSep"
+            android:textSize="20dp"
+            android:text="@string/seperator"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textIsSelectable="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editMinEnt"
+            android:hint="@string/min"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="2"
+            android:nextFocusRight="@+id/hrsEnt"/>
+
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editAmPmSel"
+            android:entries="@array/amPM"
+            android:layout_marginTop="5dp" />
+
+    </LinearLayout>
+
+    <!-- Add Button -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/editEntry"
+        android:text="@string/update"
+        android:layout_below="@+id/editTimeGroup"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/developedBy"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10px"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
